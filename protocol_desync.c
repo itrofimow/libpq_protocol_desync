@@ -55,6 +55,7 @@ static void send_a_query(PGconn *conn) {
           "libpq send 2 Syncs, "
           "got %i PGRES_FATAL_ERRORs and %i PGRES_PIPELINE_SYNCs\n",
           fatal_error_count, ready_for_query_count);
+  fprintf(stderr, "How comes we are finishing without reading second Z(ReadyForQuery)?\n");
   fflush(stderr);
 }
 
